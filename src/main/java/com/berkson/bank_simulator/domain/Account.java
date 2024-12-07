@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -19,13 +21,15 @@ import java.util.Objects;
 @Entity
 @Table(name = "account")
 @AttributeOverride(name = "id", column = @Column(name = "account_id"))
-public class Account extends BaseEntity {
+public class Account extends AuditableEntity {
     @Column(name = "account_number", nullable = false, unique = true)
     private int accountNumber;
     @Column(name = "balance", nullable = false)
     private BigDecimal balance;
     @OneToOne(mappedBy = "account")
     private User user;
+    @OneToMany(mappedBy = "account")
+    private List<Operation> operations = new ArrayList<>();
 
     @Override
     public int hashCode() {

@@ -21,7 +21,7 @@ import java.util.*;
 @Entity
 @Table(name = "users")
 @AttributeOverride(name = "id", column = @Column(name = "user_id"))
-public class User extends BaseEntity implements UserDetails, Serializable, Comparable<User> {
+public class User extends AuditableEntity implements UserDetails, Serializable, Comparable<User> {
 
     @Column(name = "username", nullable = false)
     private String username;
