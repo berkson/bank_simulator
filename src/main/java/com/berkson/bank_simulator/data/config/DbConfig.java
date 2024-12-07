@@ -50,14 +50,14 @@ public class DbConfig {
 
     @Primary
     @Bean(name = "entityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean bankDbManagerFactory(EntityManagerFactoryBuilder builder,
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder,
                                                                        @Qualifier("bankDb") DataSource dataSource) {
         return builder.dataSource(dataSource).packages("com.berkson.bank_simulator.data.domain").persistenceUnit("bank").build();
     }
 
     @Primary
-    @Bean(name = "bankDbTransactionManager")
-    public PlatformTransactionManager dbSaticTransactionManager(
+    @Bean(name = "transactionManager")
+    public PlatformTransactionManager transactionManager(
             @Qualifier("entityManagerFactory") EntityManagerFactory locargaEntityManagerFactory) {
         return new JpaTransactionManager(locargaEntityManagerFactory);
     }
