@@ -1,9 +1,6 @@
 package com.berkson.bank_simulator.web.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -30,11 +27,15 @@ public class AccountDto extends AuditableEntityDto {
     @Min(value = 1, message = "{min.account.number.value}")
     @Max(value = 2147483647, message = "{max.account.number.value}")
     private Integer accountNumber;
-    @Column(name = "balance", nullable = false)
+
+    @JsonProperty(value = "saldo")
+    @NotNull
     private BigDecimal balance;
-    @OneToOne(mappedBy = "account")
+
+    @JsonProperty(value = "usuario")
     private UserDto user;
-    @OneToMany(mappedBy = "account")
+
+    @JsonProperty(value = "operacoes")
     private List<OperationDto> operations = new ArrayList<>();
 
     @Override
