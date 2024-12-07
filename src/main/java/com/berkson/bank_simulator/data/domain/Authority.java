@@ -1,4 +1,4 @@
-package com.berkson.bank_simulator.domain;
+package com.berkson.bank_simulator.data.domain;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;

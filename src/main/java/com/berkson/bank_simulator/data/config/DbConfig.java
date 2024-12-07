@@ -1,4 +1,4 @@
-package com.berkson.bank_simulator.config;
+package com.berkson.bank_simulator.data.config;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,6 +1,6 @@
-package com.berkson.bank_simulator.domain;
+package com.berkson.bank_simulator.data.domain;
 
-import com.berkson.bank_simulator.enums.OperationType;
+import com.berkson.bank_simulator.data.enums.OperationType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

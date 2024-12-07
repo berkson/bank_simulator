@@ -1,4 +1,4 @@
-package com.berkson.bank_simulator.enums;
+package com.berkson.bank_simulator.data.enums;
 
 /**
  * Created By : Berkson Ximenes
