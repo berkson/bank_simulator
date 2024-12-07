@@ -35,6 +35,7 @@ public class User extends AuditableEntity implements UserDetails, Serializable, 
     @Column(name = "email", nullable = false)
     private String email;
     @OneToOne
+    @JoinColumn(name = "account_id")
     private Account account;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "permissions", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),

@@ -29,10 +29,10 @@ import java.time.LocalDateTime;
 public abstract class AuditableEntity extends BaseEntity {
 
     @CreationTimestamp(source = SourceType.DB)
-    @Column(name = "data_cadastro", updatable = false)
+    @Column(name = "createdAt", updatable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp(source = SourceType.DB)
-    @Column(name = "data_modificacao")
+    @Column(name = "modifiedAt")
     private LocalDateTime modifiedAt;
 }
