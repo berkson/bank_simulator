@@ -27,8 +27,7 @@ import javax.sql.DataSource;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @EnableAutoConfiguration
-@EnableJpaRepositories(basePackages = {"com.berkson.bank_simulator.repository"},
-        entityManagerFactoryRef = "bankDbManagerFactory")
+@EnableJpaRepositories(basePackages = {"com.berkson.bank_simulator.data.repository"})
 public class DbConfig {
     @Value("${dbuser}")
     private String user;
@@ -50,16 +49,16 @@ public class DbConfig {
     }
 
     @Primary
-    @Bean(name = "bankDbManagerFactory")
+    @Bean(name = "entityManagerFactory")
     public LocalContainerEntityManagerFactoryBean bankDbManagerFactory(EntityManagerFactoryBuilder builder,
                                                                        @Qualifier("bankDb") DataSource dataSource) {
-        return builder.dataSource(dataSource).packages("com.berkson.bank_simulator.domain").persistenceUnit("bank").build();
+        return builder.dataSource(dataSource).packages("com.berkson.bank_simulator.data.domain").persistenceUnit("bank").build();
     }
 
     @Primary
     @Bean(name = "bankDbTransactionManager")
     public PlatformTransactionManager dbSaticTransactionManager(
-            @Qualifier("bankDbManagerFactory") EntityManagerFactory locargaEntityManagerFactory) {
+            @Qualifier("entityManagerFactory") EntityManagerFactory locargaEntityManagerFactory) {
         return new JpaTransactionManager(locargaEntityManagerFactory);
     }
 }
