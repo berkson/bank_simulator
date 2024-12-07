@@ -1,0 +1,82 @@
+2024-12-07T12:50:37.109-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Starting BankSimulatorApplication using Java 17.0.13 with PID 19961 (/home/berkson/IdeaProjects/bank_simulator/target/classes started by berkson in /home/berkson/IdeaProjects/bank_simulator)
+2024-12-07T12:50:37.111-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T12:50:37.150-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-07T12:50:37.150-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-07T12:50:37.169-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /home/berkson/IdeaProjects/bank_simulator/compose.yaml
+2024-12-07T12:50:37.565-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-12-07T12:50:37.932-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T12:50:37.933-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T12:50:37.968-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2024-12-07T12:50:38.138-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T12:50:38.138-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-07T12:50:38.156-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AccountRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T12:50:38.157-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AuthorityRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T12:50:38.157-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.OperationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T12:50:38.158-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T12:50:38.158-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2024-12-07T12:50:38.382-03:00  INFO 19961 --- [bank_simulator] [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2024-12-07T12:50:38.383-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T12:50:38.384-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T12:50:38.385-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T12:50:38.387-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T12:50:38.387-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2024-12-07T12:50:38.388-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-12-07T12:50:38.388-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T12:50:38.388-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T12:50:38.388-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T12:50:38.388-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource class path resource [db.properties] [org.springframework.core.io.support.ResourcePropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T12:50:38.569-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-12-07T12:50:38.579-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-12-07T12:50:38.581-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-12-07T12:50:38.612-03:00  INFO 19961 --- [bank_simulator] [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@3f55cd75 with name: stringEncryptor
+2024-12-07T12:50:38.895-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (https)
+2024-12-07T12:50:38.907-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T12:50:38.908-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-07T12:50:38.935-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T12:50:38.936-03:00  INFO 19961 --- [bank_simulator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1365 ms
+2024-12-07T12:50:39.086-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bank]
+2024-12-07T12:50:39.131-03:00  INFO 19961 --- [bank_simulator] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T12:50:39.157-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T12:50:39.327-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T12:50:39.353-03:00  INFO 19961 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T12:50:39.442-03:00  INFO 19961 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f164634
+2024-12-07T12:50:39.443-03:00  INFO 19961 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T12:50:39.488-03:00  INFO 19961 --- [bank_simulator] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-07T12:50:40.212-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-07T12:50:40.214-03:00  INFO 19961 --- [bank_simulator] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T12:50:40.233-03:00  WARN 19961 --- [bank_simulator] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/home/berkson/IdeaProjects/bank_simulator/target/classes/com/berkson/bank_simulator/web/security/config/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'inMemoryUserDetailsManager' defined in class path resource [org/springframework/boot/autoconfigure/security/servlet/UserDetailsServiceAutoConfiguration.class]: Failed to instantiate [org.springframework.security.provisioning.InMemoryUserDetailsManager]: Factory method 'inMemoryUserDetailsManager' threw exception with message: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2024-12-07T12:50:40.233-03:00  INFO 19961 --- [bank_simulator] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T12:50:40.235-03:00  INFO 19961 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T12:50:40.237-03:00  INFO 19961 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T12:50:40.242-03:00  INFO 19961 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-07T12:50:40.253-03:00  INFO 19961 --- [bank_simulator] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-07T12:50:40.265-03:00 ERROR 19961 --- [bank_simulator] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityConfig defined in file [/home/berkson/IdeaProjects/bank_simulator/target/classes/com/berkson/bank_simulator/web/security/config/SecurityConfig.class]
+↑     ↓
+|  inMemoryUserDetailsManager defined in class path resource [org/springframework/boot/autoconfigure/security/servlet/UserDetailsServiceAutoConfiguration.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+

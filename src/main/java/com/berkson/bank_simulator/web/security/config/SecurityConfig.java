@@ -45,6 +45,7 @@ public class SecurityConfig {
     }
 
     @Bean
+    @Primary
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.headers((headers) -> headers.addHeaderWriter(writer()))
                 .csrf(c -> {
