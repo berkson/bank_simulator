@@ -27,7 +27,7 @@ public class OperationDto extends AuditableEntityDto {
     @NotNull
     private BigDecimal value;
     @JsonProperty(value = "conta")
-    private Account account;
+    private AccountDto account;
 
 
 }
