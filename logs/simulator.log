@@ -1116,3 +1116,906 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-12-07T13:27:50.382-03:00  INFO 26365 --- [bank_simulator] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'bank'
 2024-12-07T13:27:50.384-03:00  INFO 26365 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-07T13:27:50.387-03:00  INFO 26365 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T15:58:58.148-03:00  INFO 12050 --- [bank_simulator] [main] c.b.b.BankSimulatorApplicationTests      : Starting BankSimulatorApplicationTests using Java 17.0.13 with PID 12050 (started by berkson in /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator)
+2024-12-07T15:58:58.152-03:00  INFO 12050 --- [bank_simulator] [main] c.b.b.BankSimulatorApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T15:58:59.716-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T15:58:59.717-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T15:58:59.746-03:00  INFO 12050 --- [bank_simulator] [main] .i.s.PathMatchingResourcePatternResolver : Skipping search for files matching pattern [**/*.class]: directory [/mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/target/test-classes/com/berkson/bank_simulator/data/repository] does not exist
+2024-12-07T15:58:59.807-03:00  INFO 12050 --- [bank_simulator] [main] .i.s.PathMatchingResourcePatternResolver : Skipping search for files matching pattern [**/*Impl.class]: directory [/mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/target/test-classes/com/berkson/bank_simulator/data/repository] does not exist
+2024-12-07T15:58:59.830-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2024-12-07T15:59:00.371-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T15:59:00.372-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-07T15:59:00.422-03:00  INFO 12050 --- [bank_simulator] [main] .i.s.PathMatchingResourcePatternResolver : Skipping search for files matching pattern [**/*.class]: directory [/mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/target/test-classes/com/berkson/bank_simulator/data/config] does not exist
+2024-12-07T15:59:00.464-03:00  INFO 12050 --- [bank_simulator] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AccountRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T15:59:00.465-03:00  INFO 12050 --- [bank_simulator] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AuthorityRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T15:59:00.467-03:00  INFO 12050 --- [bank_simulator] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.OperationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T15:59:00.468-03:00  INFO 12050 --- [bank_simulator] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T15:59:00.469-03:00  INFO 12050 --- [bank_simulator] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 0 JDBC repository interfaces.
+2024-12-07T15:59:01.104-03:00  INFO 12050 --- [bank_simulator] [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2024-12-07T15:59:01.106-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T15:59:01.111-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.112-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.112-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T15:59:01.113-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2024-12-07T15:59:01.114-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.115-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2024-12-07T15:59:01.116-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-12-07T15:59:01.121-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.122-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.122-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource class path resource [db.properties] [org.springframework.core.io.support.ResourcePropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T15:59:01.549-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-12-07T15:59:01.600-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-12-07T15:59:01.615-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-12-07T15:59:01.674-03:00  INFO 12050 --- [bank_simulator] [main] c.u.j.encryptor.DefaultLazyEncryptor     : Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@32a4ecbe with name: stringEncryptor
+2024-12-07T15:59:01.916-03:00  INFO 12050 --- [bank_simulator] [main] .i.s.PathMatchingResourcePatternResolver : Skipping search for files matching pattern [**/*.class]: directory [/mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/target/test-classes/com/berkson/bank_simulator/data/domain] does not exist
+2024-12-07T15:59:01.951-03:00  INFO 12050 --- [bank_simulator] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bank]
+2024-12-07T15:59:02.108-03:00  INFO 12050 --- [bank_simulator] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T15:59:02.238-03:00  INFO 12050 --- [bank_simulator] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T15:59:02.939-03:00  INFO 12050 --- [bank_simulator] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T15:59:03.020-03:00  INFO 12050 --- [bank_simulator] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T15:59:04.140-03:00  WARN 12050 --- [bank_simulator] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2024-12-07T15:59:04.141-03:00 ERROR 12050 --- [bank_simulator] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Connection to localhost:35222 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2024-12-07T15:59:04.143-03:00  WARN 12050 --- [bank_simulator] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to localhost:35222 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:35222 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.4.jar:42.7.4]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	... 115 common frames omitted
+Caused by: java.net.ConnectException: Conexão recusada
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268) ~[postgresql-42.7.4.jar:42.7.4]
+	... 129 common frames omitted
+
+2024-12-07T15:59:04.155-03:00 ERROR 12050 --- [bank_simulator] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-12-07T15:59:04.157-03:00  WARN 12050 --- [bank_simulator] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/berkson/bank_simulator/data/config/DbConfig.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-12-07T15:59:04.198-03:00  INFO 12050 --- [bank_simulator] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-07T15:59:04.261-03:00 ERROR 12050 --- [bank_simulator] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/berkson/bank_simulator/data/config/DbConfig.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798) ~[spring-beans-6.2.0.jar:6.2.0]
+	... 95 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	... 110 common frames omitted
+
+2024-12-07T15:59:04.273-03:00  WARN 12050 --- [bank_simulator] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.berkson.bank_simulator.BankSimulatorApplicationTests@ff21443]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@271e851e testClass = com.berkson.bank_simulator.BankSimulatorApplicationTests, locations = [], classes = [com.berkson.bank_simulator.BankSimulatorApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@183ec003, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3e08ff24, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@302c971f, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@536f2a7e, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@70cf32e3, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@72c8e7b, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@2123b003], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.3.jar:5.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.3.jar:1.11.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/berkson/bank_simulator/data/config/DbConfig.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.0.jar:3.4.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.0.jar:6.2.0]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.0.jar:6.2.0]
+	... 75 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1849) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798) ~[spring-beans-6.2.0.jar:6.2.0]
+	... 95 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.2.Final.jar:6.6.2.Final]
+	... 110 common frames omitted
+
+2024-12-07T16:00:12.468-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Starting BankSimulatorApplication using Java 17.0.13 with PID 12238 (/home/berkson/IdeaProjects/bank_simulator/target/classes started by berkson in /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator)
+2024-12-07T16:00:12.473-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T16:00:12.573-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-07T16:00:12.574-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-07T16:00:12.611-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/compose.yaml
+2024-12-07T16:00:13.631-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  postgres Pulling 
+2024-12-07T16:00:15.422-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  bc0965b23a04 Already exists 
+2024-12-07T16:00:15.430-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Pulling fs layer 
+2024-12-07T16:00:15.432-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Pulling fs layer 
+2024-12-07T16:00:15.434-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Pulling fs layer 
+2024-12-07T16:00:15.436-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Pulling fs layer 
+2024-12-07T16:00:15.438-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Pulling fs layer 
+2024-12-07T16:00:15.439-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Pulling fs layer 
+2024-12-07T16:00:15.440-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Pulling fs layer 
+2024-12-07T16:00:15.441-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Pulling fs layer 
+2024-12-07T16:00:15.442-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Pulling fs layer 
+2024-12-07T16:00:15.443-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Pulling fs layer 
+2024-12-07T16:00:15.445-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Pulling fs layer 
+2024-12-07T16:00:15.447-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Pulling fs layer 
+2024-12-07T16:00:15.448-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Pulling fs layer 
+2024-12-07T16:00:15.449-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Waiting 
+2024-12-07T16:00:15.451-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Waiting 
+2024-12-07T16:00:15.452-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Waiting 
+2024-12-07T16:00:15.454-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Waiting 
+2024-12-07T16:00:15.455-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Waiting 
+2024-12-07T16:00:15.456-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Waiting 
+2024-12-07T16:00:15.458-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Waiting 
+2024-12-07T16:00:15.459-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Waiting 
+2024-12-07T16:00:15.460-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Waiting 
+2024-12-07T16:00:15.982-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Downloading [>                                                  ]  15.78kB/1.447MB
+2024-12-07T16:00:15.987-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Downloading [>                                                  ]  45.71kB/4.534MB
+2024-12-07T16:00:16.007-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Downloading [=============================>                     ]     688B/1.167kB
+2024-12-07T16:00:16.010-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Downloading [==================================================>]  1.167kB/1.167kB
+2024-12-07T16:00:16.012-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Verifying Checksum 
+2024-12-07T16:00:16.015-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Download complete 
+2024-12-07T16:00:16.016-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Extracting [==================================================>]  1.167kB/1.167kB
+2024-12-07T16:00:16.018-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Extracting [==================================================>]  1.167kB/1.167kB
+2024-12-07T16:00:16.056-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  002e1a8eb6f9 Pull complete 
+2024-12-07T16:00:16.083-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Downloading [====>                                              ]  129.3kB/1.447MB
+2024-12-07T16:00:16.089-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Downloading [=>                                                 ]    143kB/4.534MB
+2024-12-07T16:00:16.224-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Downloading [===================>                               ]  571.7kB/1.447MB
+2024-12-07T16:00:16.226-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Downloading [=======>                                           ]  687.4kB/4.534MB
+2024-12-07T16:00:16.313-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Verifying Checksum 
+2024-12-07T16:00:16.315-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Download complete 
+2024-12-07T16:00:16.328-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Downloading [=====================>                             ]  1.982MB/4.534MB
+2024-12-07T16:00:16.431-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Downloading [========================================>          ]  3.664MB/4.534MB
+2024-12-07T16:00:16.467-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Verifying Checksum 
+2024-12-07T16:00:16.470-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Download complete 
+2024-12-07T16:00:16.472-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Extracting [>                                                  ]  65.54kB/4.534MB
+2024-12-07T16:00:16.570-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Extracting [===============================>                   ]  2.884MB/4.534MB
+2024-12-07T16:00:16.619-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Extracting [==================================================>]  4.534MB/4.534MB
+2024-12-07T16:00:16.645-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [>                                                  ]  81.54kB/8.066MB
+2024-12-07T16:00:16.679-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  a24f300391ed Pull complete 
+2024-12-07T16:00:16.685-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Extracting [=>                                                 ]  32.77kB/1.447MB
+2024-12-07T16:00:16.723-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Extracting [==================================================>]  1.447MB/1.447MB
+2024-12-07T16:00:16.739-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  627f580b7ad7 Pull complete 
+2024-12-07T16:00:16.746-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [==>                                                ]    331kB/8.066MB
+2024-12-07T16:00:16.856-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [======>                                            ]   1.08MB/8.066MB
+2024-12-07T16:00:16.928-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Downloading [>                                                  ]   12.9kB/1.196MB
+2024-12-07T16:00:16.961-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [================>                                  ]  2.644MB/8.066MB
+2024-12-07T16:00:17.058-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [================================>                  ]  5.294MB/8.066MB
+2024-12-07T16:00:17.089-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Downloading [====>                                              ]  105.9kB/1.196MB
+2024-12-07T16:00:17.158-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Downloading [==============================================>    ]  7.523MB/8.066MB
+2024-12-07T16:00:17.177-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Downloading [==================================================>]     114B/114B
+2024-12-07T16:00:17.182-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Verifying Checksum 
+2024-12-07T16:00:17.185-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Download complete 
+2024-12-07T16:00:17.188-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Verifying Checksum 
+2024-12-07T16:00:17.190-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Download complete 
+2024-12-07T16:00:17.191-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [>                                                  ]   98.3kB/8.066MB
+2024-12-07T16:00:17.236-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Downloading [=========>                                         ]  232.7kB/1.196MB
+2024-12-07T16:00:17.290-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [=======>                                           ]   1.18MB/8.066MB
+2024-12-07T16:00:17.338-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Downloading [================================================>  ]  1.158MB/1.196MB
+2024-12-07T16:00:17.341-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Verifying Checksum 
+2024-12-07T16:00:17.341-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Download complete 
+2024-12-07T16:00:17.394-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [====================>                              ]  3.342MB/8.066MB
+2024-12-07T16:00:17.497-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [===================================>               ]  5.702MB/8.066MB
+2024-12-07T16:00:17.601-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [===========================================>       ]   6.98MB/8.066MB
+2024-12-07T16:00:17.647-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Extracting [==================================================>]  8.066MB/8.066MB
+2024-12-07T16:00:17.681-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  cfb3c2203f88 Pull complete 
+2024-12-07T16:00:17.686-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Extracting [=>                                                 ]  32.77kB/1.196MB
+2024-12-07T16:00:17.728-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Extracting [==================================================>]  1.196MB/1.196MB
+2024-12-07T16:00:17.733-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Extracting [==================================================>]  1.196MB/1.196MB
+2024-12-07T16:00:17.748-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Downloading [===========>                                       ]     720B/3.142kB
+2024-12-07T16:00:17.749-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Downloading [==================================================>]  3.142kB/3.142kB
+2024-12-07T16:00:17.751-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Verifying Checksum 
+2024-12-07T16:00:17.752-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Download complete 
+2024-12-07T16:00:17.765-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  9e592465b243 Pull complete 
+2024-12-07T16:00:17.767-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Extracting [==================================================>]     114B/114B
+2024-12-07T16:00:17.768-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Extracting [==================================================>]     114B/114B
+2024-12-07T16:00:17.778-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8d4265d09d9c Pull complete 
+2024-12-07T16:00:17.781-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Extracting [==================================================>]  3.142kB/3.142kB
+2024-12-07T16:00:17.782-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Extracting [==================================================>]  3.142kB/3.142kB
+2024-12-07T16:00:17.797-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  e3a8293e92fd Pull complete 
+2024-12-07T16:00:17.880-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Downloading [===>                                               ]     719B/10.23kB
+2024-12-07T16:00:17.880-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Downloading [==================================================>]  10.23kB/10.23kB
+2024-12-07T16:00:17.881-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Verifying Checksum 
+2024-12-07T16:00:17.884-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Download complete 
+2024-12-07T16:00:17.922-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [>                                                  ]  539.9kB/110.3MB
+2024-12-07T16:00:18.047-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [>                                                  ]  2.136MB/110.3MB
+2024-12-07T16:00:18.156-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=>                                                 ]  3.746MB/110.3MB
+2024-12-07T16:00:18.280-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==>                                                ]  5.901MB/110.3MB
+2024-12-07T16:00:18.383-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===>                                               ]  8.055MB/110.3MB
+2024-12-07T16:00:18.498-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [====>                                              ]  9.661MB/110.3MB
+2024-12-07T16:00:18.622-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=====>                                             ]  11.81MB/110.3MB
+2024-12-07T16:00:18.693-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Downloading [==================================================>]     128B/128B
+2024-12-07T16:00:18.694-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Verifying Checksum 
+2024-12-07T16:00:18.695-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Download complete 
+2024-12-07T16:00:18.726-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [======>                                            ]  13.94MB/110.3MB
+2024-12-07T16:00:18.903-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=======>                                           ]   16.1MB/110.3MB
+2024-12-07T16:00:18.995-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Downloading [==================================================>]     167B/167B
+2024-12-07T16:00:18.997-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Verifying Checksum 
+2024-12-07T16:00:18.999-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Download complete 
+2024-12-07T16:00:19.017-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [========>                                          ]  18.26MB/110.3MB
+2024-12-07T16:00:19.176-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=========>                                         ]   20.4MB/110.3MB
+2024-12-07T16:00:19.276-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==========>                                        ]  22.55MB/110.3MB
+2024-12-07T16:00:19.397-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===========>                                       ]  25.23MB/110.3MB
+2024-12-07T16:00:19.509-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [============>                                      ]  27.94MB/110.3MB
+2024-12-07T16:00:19.631-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=============>                                     ]  30.62MB/110.3MB
+2024-12-07T16:00:19.711-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Downloading [======>                                            ]     720B/5.415kB
+2024-12-07T16:00:19.713-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Downloading [==================================================>]  5.415kB/5.415kB
+2024-12-07T16:00:19.715-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Verifying Checksum 
+2024-12-07T16:00:19.715-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Download complete 
+2024-12-07T16:00:19.738-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===============>                                   ]  33.31MB/110.3MB
+2024-12-07T16:00:19.853-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [================>                                  ]     36MB/110.3MB
+2024-12-07T16:00:19.863-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Downloading [==================================================>]     185B/185B
+2024-12-07T16:00:19.865-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Verifying Checksum 
+2024-12-07T16:00:19.866-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Download complete 
+2024-12-07T16:00:20.028-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=================>                                 ]  39.21MB/110.3MB
+2024-12-07T16:00:20.143-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==================>                                ]  41.37MB/110.3MB
+2024-12-07T16:00:20.250-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===================>                               ]  43.52MB/110.3MB
+2024-12-07T16:00:20.412-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [====================>                              ]  46.19MB/110.3MB
+2024-12-07T16:00:20.521-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [======================>                            ]  48.89MB/110.3MB
+2024-12-07T16:00:20.625-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [======================>                            ]  49.97MB/110.3MB
+2024-12-07T16:00:20.806-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [========================>                          ]  53.18MB/110.3MB
+2024-12-07T16:00:20.908-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=========================>                         ]  55.85MB/110.3MB
+2024-12-07T16:00:21.008-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=========================>                         ]  56.92MB/110.3MB
+2024-12-07T16:00:21.171-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===========================>                       ]   59.6MB/110.3MB
+2024-12-07T16:00:21.271-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [============================>                      ]  62.28MB/110.3MB
+2024-12-07T16:00:21.373-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [============================>                      ]  63.35MB/110.3MB
+2024-12-07T16:00:21.479-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=============================>                     ]  66.03MB/110.3MB
+2024-12-07T16:00:21.593-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==============================>                    ]  67.11MB/110.3MB
+2024-12-07T16:00:21.758-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===============================>                   ]  69.81MB/110.3MB
+2024-12-07T16:00:21.878-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [================================>                  ]  72.46MB/110.3MB
+2024-12-07T16:00:21.985-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==================================>                ]  75.14MB/110.3MB
+2024-12-07T16:00:22.108-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==================================>                ]  76.74MB/110.3MB
+2024-12-07T16:00:22.224-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===================================>               ]   78.9MB/110.3MB
+2024-12-07T16:00:22.334-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [====================================>              ]   81.6MB/110.3MB
+2024-12-07T16:00:22.444-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=====================================>             ]  83.75MB/110.3MB
+2024-12-07T16:00:22.557-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=======================================>           ]  86.98MB/110.3MB
+2024-12-07T16:00:22.672-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [========================================>          ]  89.66MB/110.3MB
+2024-12-07T16:00:22.783-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=========================================>         ]  92.35MB/110.3MB
+2024-12-07T16:00:22.899-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==========================================>        ]  93.44MB/110.3MB
+2024-12-07T16:00:23.006-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===========================================>       ]  96.65MB/110.3MB
+2024-12-07T16:00:23.119-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=============================================>     ]  99.33MB/110.3MB
+2024-12-07T16:00:23.287-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [==============================================>    ]    102MB/110.3MB
+2024-12-07T16:00:23.403-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [===============================================>   ]  104.7MB/110.3MB
+2024-12-07T16:00:23.519-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [================================================>  ]  107.4MB/110.3MB
+2024-12-07T16:00:23.621-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Downloading [=================================================> ]  109.5MB/110.3MB
+2024-12-07T16:00:23.655-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Verifying Checksum 
+2024-12-07T16:00:23.657-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Download complete 
+2024-12-07T16:00:23.777-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [>                                                  ]  557.1kB/110.3MB
+2024-12-07T16:00:23.888-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=>                                                 ]  2.785MB/110.3MB
+2024-12-07T16:00:24.006-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [====>                                              ]  8.913MB/110.3MB
+2024-12-07T16:00:24.114-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [======>                                            ]  13.37MB/110.3MB
+2024-12-07T16:00:24.215-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [========>                                          ]  17.83MB/110.3MB
+2024-12-07T16:00:24.327-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [==========>                                        ]   23.4MB/110.3MB
+2024-12-07T16:00:24.434-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [============>                                      ]   27.3MB/110.3MB
+2024-12-07T16:00:24.540-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [===============>                                   ]  33.98MB/110.3MB
+2024-12-07T16:00:24.644-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [==================>                                ]  41.22MB/110.3MB
+2024-12-07T16:00:24.752-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=====================>                             ]  48.46MB/110.3MB
+2024-12-07T16:00:24.854-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=======================>                           ]  52.92MB/110.3MB
+2024-12-07T16:00:24.958-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=========================>                         ]  55.71MB/110.3MB
+2024-12-07T16:00:25.062-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [===========================>                       ]   59.6MB/110.3MB
+2024-12-07T16:00:25.169-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=============================>                     ]  65.18MB/110.3MB
+2024-12-07T16:00:25.273-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [================================>                  ]  72.42MB/110.3MB
+2024-12-07T16:00:25.376-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [===================================>               ]  78.54MB/110.3MB
+2024-12-07T16:00:25.481-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [======================================>            ]  85.23MB/110.3MB
+2024-12-07T16:00:25.602-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=========================================>         ]  92.47MB/110.3MB
+2024-12-07T16:00:25.703-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [==========================================>        ]  94.14MB/110.3MB
+2024-12-07T16:00:25.853-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [============================================>      ]  98.04MB/110.3MB
+2024-12-07T16:00:25.954-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=============================================>     ]  101.4MB/110.3MB
+2024-12-07T16:00:26.102-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [===============================================>   ]  104.7MB/110.3MB
+2024-12-07T16:00:26.207-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [================================================>  ]  106.4MB/110.3MB
+2024-12-07T16:00:26.427-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=================================================> ]  108.6MB/110.3MB
+2024-12-07T16:00:26.607-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=================================================> ]  109.2MB/110.3MB
+2024-12-07T16:00:26.736-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [=================================================> ]  109.7MB/110.3MB
+2024-12-07T16:00:26.800-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Extracting [==================================================>]  110.3MB/110.3MB
+2024-12-07T16:00:26.883-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cb801c39436 Pull complete 
+2024-12-07T16:00:26.886-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Extracting [==================================================>]  10.23kB/10.23kB
+2024-12-07T16:00:26.887-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Extracting [==================================================>]  10.23kB/10.23kB
+2024-12-07T16:00:26.899-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c5fdb20d8658 Pull complete 
+2024-12-07T16:00:26.902-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Extracting [==================================================>]     128B/128B
+2024-12-07T16:00:26.903-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Extracting [==================================================>]     128B/128B
+2024-12-07T16:00:26.914-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  67c5fe618f0c Pull complete 
+2024-12-07T16:00:26.916-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Extracting [==================================================>]     167B/167B
+2024-12-07T16:00:26.918-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Extracting [==================================================>]     167B/167B
+2024-12-07T16:00:26.937-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  c9cdd1fe82e4 Pull complete 
+2024-12-07T16:00:26.942-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Extracting [==================================================>]  5.415kB/5.415kB
+2024-12-07T16:00:26.945-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Extracting [==================================================>]  5.415kB/5.415kB
+2024-12-07T16:00:26.970-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  8f152c4aceed Pull complete 
+2024-12-07T16:00:26.974-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Extracting [==================================================>]     185B/185B
+2024-12-07T16:00:26.977-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Extracting [==================================================>]     185B/185B
+2024-12-07T16:00:27.002-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  2cd360f3b7db Pull complete 
+2024-12-07T16:00:27.041-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  postgres Pulled 
+2024-12-07T16:00:27.060-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network bank_simulator_default  Creating
+2024-12-07T16:00:27.201-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network bank_simulator_default  Created
+2024-12-07T16:00:27.204-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Volume "bank_simulator_bank_simulator"  Creating
+2024-12-07T16:00:27.209-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Volume "bank_simulator_bank_simulator"  Created
+2024-12-07T16:00:27.210-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Creating
+2024-12-07T16:00:28.020-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Created
+2024-12-07T16:00:28.023-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Starting
+2024-12-07T16:00:28.537-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Started
+2024-12-07T16:00:28.537-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Waiting
+2024-12-07T16:00:29.039-03:00  INFO 12238 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Healthy
+2024-12-07T16:00:31.185-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T16:00:31.185-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T16:00:31.250-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2024-12-07T16:00:31.565-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T16:00:31.565-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-07T16:00:31.600-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AccountRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:00:31.600-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AuthorityRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:00:31.600-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.OperationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:00:31.601-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:00:31.601-03:00  INFO 12238 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+2024-12-07T16:00:31.974-03:00  INFO 12238 --- [bank_simulator] [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2024-12-07T16:00:31.975-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T16:00:31.976-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:00:31.976-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:00:31.977-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:00:31.977-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2024-12-07T16:00:31.977-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-12-07T16:00:31.978-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:00:31.978-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:00:31.978-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:00:31.978-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource class path resource [db.properties] [org.springframework.core.io.support.ResourcePropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:00:32.191-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-12-07T16:00:32.218-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-12-07T16:00:32.225-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-12-07T16:00:32.305-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@7cb5b053 with name: stringEncryptor
+2024-12-07T16:00:32.709-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (https)
+2024-12-07T16:00:32.726-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T16:00:32.726-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-07T16:00:32.786-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T16:00:32.790-03:00  INFO 12238 --- [bank_simulator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2351 ms
+2024-12-07T16:00:33.009-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bank]
+2024-12-07T16:00:33.076-03:00  INFO 12238 --- [bank_simulator] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T16:00:33.118-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T16:00:33.459-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T16:00:33.497-03:00  INFO 12238 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T16:00:33.633-03:00  INFO 12238 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@91e4d28
+2024-12-07T16:00:33.635-03:00  INFO 12238 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T16:00:33.737-03:00  INFO 12238 --- [bank_simulator] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-07T16:00:35.064-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-07T16:00:35.147-03:00  INFO 12238 --- [bank_simulator] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T16:00:35.624-03:00  WARN 12238 --- [bank_simulator] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-07T16:00:35.896-03:00  WARN 12238 --- [bank_simulator] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2024-12-07T16:00:36.787-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-07T16:00:37.023-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8081], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/berkson/.keystore] using alias [tomcat] with trust store [null]
+2024-12-07T16:00:37.034-03:00  INFO 12238 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (https) with context path '/'
+2024-12-07T16:00:37.036-03:00  INFO 12238 --- [bank_simulator] [restartedMain] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2024-12-07T16:00:37.036-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2024-12-07T16:00:37.037-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source devtools refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source applicationInfo refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source class path resource [db.properties] refreshed
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:00:37.038-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2024-12-07T16:00:37.049-03:00  INFO 12238 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Started BankSimulatorApplication in 25.78 seconds (process running for 27.546)
+2024-12-07T16:02:28.642-03:00  INFO 12238 --- [bank_simulator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-07T16:02:28.646-03:00  INFO 12238 --- [bank_simulator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-07T16:02:28.651-03:00  INFO 12238 --- [bank_simulator] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T16:02:28.653-03:00  INFO 12238 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T16:02:28.658-03:00  INFO 12238 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T16:04:25.664-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Starting BankSimulatorApplication using Java 17.0.13 with PID 13389 (/home/berkson/IdeaProjects/bank_simulator/target/classes started by berkson in /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator)
+2024-12-07T16:04:25.668-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T16:04:25.734-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-07T16:04:25.734-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-07T16:04:25.767-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/compose.yaml
+2024-12-07T16:04:26.592-03:00  INFO 13389 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Created
+2024-12-07T16:04:26.593-03:00  INFO 13389 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Starting
+2024-12-07T16:04:26.858-03:00  INFO 13389 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Started
+2024-12-07T16:04:26.858-03:00  INFO 13389 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Waiting
+2024-12-07T16:04:27.360-03:00  INFO 13389 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Healthy
+2024-12-07T16:04:28.546-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T16:04:28.547-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T16:04:28.615-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-12-07T16:04:28.948-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T16:04:28.948-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-07T16:04:28.984-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AccountRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:04:28.985-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AuthorityRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:04:28.985-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.OperationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:04:28.986-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T16:04:28.986-03:00  INFO 13389 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JDBC repository interfaces.
+2024-12-07T16:04:29.362-03:00  INFO 13389 --- [bank_simulator] [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2024-12-07T16:04:29.364-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T16:04:29.365-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:04:29.365-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:04:29.366-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:04:29.367-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2024-12-07T16:04:29.368-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-12-07T16:04:29.368-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:04:29.369-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:04:29.369-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:04:29.369-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource class path resource [db.properties] [org.springframework.core.io.support.ResourcePropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T16:04:29.590-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-12-07T16:04:29.617-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-12-07T16:04:29.622-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-12-07T16:04:29.700-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@77812958 with name: stringEncryptor
+2024-12-07T16:04:30.084-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (https)
+2024-12-07T16:04:30.103-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T16:04:30.104-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-07T16:04:30.152-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T16:04:30.153-03:00  INFO 13389 --- [bank_simulator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2427 ms
+2024-12-07T16:04:30.373-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bank]
+2024-12-07T16:04:30.438-03:00  INFO 13389 --- [bank_simulator] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T16:04:30.477-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T16:04:30.825-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T16:04:30.865-03:00  INFO 13389 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T16:04:30.998-03:00  INFO 13389 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@633384ed
+2024-12-07T16:04:31.001-03:00  INFO 13389 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T16:04:31.113-03:00  INFO 13389 --- [bank_simulator] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-07T16:04:32.881-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-07T16:04:32.955-03:00  INFO 13389 --- [bank_simulator] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T16:04:33.853-03:00  WARN 13389 --- [bank_simulator] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-07T16:04:34.440-03:00  WARN 13389 --- [bank_simulator] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2024-12-07T16:04:34.548-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-12-07T16:04:35.343-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-07T16:04:35.577-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8081], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/berkson/.keystore] using alias [tomcat] with trust store [null]
+2024-12-07T16:04:35.588-03:00  INFO 13389 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (https) with context path '/'
+2024-12-07T16:04:35.590-03:00  INFO 13389 --- [bank_simulator] [restartedMain] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2024-12-07T16:04:35.591-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2024-12-07T16:04:35.591-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2024-12-07T16:04:35.591-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2024-12-07T16:04:35.591-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+2024-12-07T16:04:35.592-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source devtools refreshed
+2024-12-07T16:04:35.592-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source applicationInfo refreshed
+2024-12-07T16:04:35.592-03:00  INFO 13389 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source class path resource [db.properties] refreshed
+2024-12-07T16:04:35.592-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T16:04:35.593-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T16:04:35.594-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2024-12-07T16:04:35.605-03:00  INFO 13389 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Started BankSimulatorApplication in 10.927 seconds (process running for 12.029)
+2024-12-07T16:04:50.502-03:00  INFO 13389 --- [bank_simulator] [https-jsse-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-07T16:04:50.503-03:00  INFO 13389 --- [bank_simulator] [https-jsse-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-07T16:04:50.505-03:00  INFO 13389 --- [bank_simulator] [https-jsse-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-07T16:04:50.657-03:00  INFO 13389 --- [bank_simulator] [https-jsse-nio-8081-exec-4] c.b.b.w.s.s.AuthenticationEntryPoint     : Ponto de autenticação!
+2024-12-07T16:05:06.878-03:00  INFO 13389 --- [bank_simulator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-07T16:05:06.884-03:00  INFO 13389 --- [bank_simulator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-07T16:05:06.895-03:00  INFO 13389 --- [bank_simulator] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T16:05:06.898-03:00  INFO 13389 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T16:05:06.907-03:00  INFO 13389 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T17:25:40.449-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Starting BankSimulatorApplication using Java 17.0.13 with PID 4706 (/home/berkson/IdeaProjects/bank_simulator/target/classes started by berkson in /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator)
+2024-12-07T17:25:40.456-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T17:25:40.611-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-07T17:25:40.612-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-07T17:25:40.711-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file /mnt/153838B53DB8D7AD/IdeaProjects/bank_simulator/compose.yaml
+2024-12-07T17:25:41.910-03:00  INFO 4706 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Created
+2024-12-07T17:25:41.913-03:00  INFO 4706 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Starting
+2024-12-07T17:25:42.366-03:00  INFO 4706 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Started
+2024-12-07T17:25:42.377-03:00  INFO 4706 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Waiting
+2024-12-07T17:25:42.868-03:00  INFO 4706 --- [bank_simulator] [OutputReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container bank_simulator-postgres-1  Healthy
+2024-12-07T17:25:45.078-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T17:25:45.082-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T17:25:45.532-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 294 ms. Found 4 JPA repository interfaces.
+2024-12-07T17:25:45.950-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-07T17:25:45.956-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-07T17:25:46.016-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AccountRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T17:25:46.018-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.AuthorityRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T17:25:46.021-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.OperationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T17:25:46.022-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkson.bank_simulator.data.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-07T17:25:46.023-03:00  INFO 4706 --- [bank_simulator] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 0 JDBC repository interfaces.
+2024-12-07T17:25:46.490-03:00  INFO 4706 --- [bank_simulator] [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2024-12-07T17:25:46.492-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T17:25:46.494-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T17:25:46.495-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T17:25:46.497-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T17:25:46.498-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2024-12-07T17:25:46.499-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-12-07T17:25:46.499-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T17:25:46.500-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T17:25:46.500-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T17:25:46.500-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource class path resource [db.properties] [org.springframework.core.io.support.ResourcePropertySource] to EncryptableMapPropertySourceWrapper
+2024-12-07T17:25:46.849-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-12-07T17:25:46.865-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-12-07T17:25:46.869-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-12-07T17:25:46.911-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@4e4967cf with name: stringEncryptor
+2024-12-07T17:25:47.434-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (https)
+2024-12-07T17:25:47.453-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T17:25:47.454-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-07T17:25:47.561-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T17:25:47.562-03:00  INFO 4706 --- [bank_simulator] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4287 ms
+2024-12-07T17:25:47.857-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bank]
+2024-12-07T17:25:47.950-03:00  INFO 4706 --- [bank_simulator] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T17:25:48.004-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T17:25:48.454-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T17:25:48.512-03:00  INFO 4706 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T17:25:48.742-03:00  INFO 4706 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b01bc70
+2024-12-07T17:25:48.746-03:00  INFO 4706 --- [bank_simulator] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T17:25:48.857-03:00  INFO 4706 --- [bank_simulator] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-07T17:25:50.545-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-07T17:25:50.649-03:00  INFO 4706 --- [bank_simulator] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T17:25:51.185-03:00  WARN 4706 --- [bank_simulator] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-07T17:25:51.565-03:00  WARN 4706 --- [bank_simulator] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2024-12-07T17:25:51.733-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-12-07T17:25:52.930-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-07T17:25:53.274-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8081], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/home/berkson/.keystore] using alias [tomcat] with trust store [null]
+2024-12-07T17:25:53.318-03:00  INFO 4706 --- [bank_simulator] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (https) with context path '/'
+2024-12-07T17:25:53.321-03:00  INFO 4706 --- [bank_simulator] [restartedMain] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2024-12-07T17:25:53.322-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2024-12-07T17:25:53.323-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2024-12-07T17:25:53.323-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2024-12-07T17:25:53.323-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' refreshed
+2024-12-07T17:25:53.323-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source devtools refreshed
+2024-12-07T17:25:53.324-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source applicationInfo refreshed
+2024-12-07T17:25:53.324-03:00  INFO 4706 --- [bank_simulator] [restartedMain] CachingDelegateEncryptablePropertySource : Property Source class path resource [db.properties] refreshed
+2024-12-07T17:25:53.324-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2024-12-07T17:25:53.325-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2024-12-07T17:25:53.326-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2024-12-07T17:25:53.348-03:00  INFO 4706 --- [bank_simulator] [restartedMain] c.b.b.BankSimulatorApplication           : Started BankSimulatorApplication in 13.937 seconds (process running for 15.762)
+2024-12-07T17:39:48.127-03:00  INFO 4706 --- [bank_simulator] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-07T17:39:48.145-03:00  INFO 4706 --- [bank_simulator] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-07T17:39:48.169-03:00  INFO 4706 --- [bank_simulator] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'bank'
+2024-12-07T17:39:48.177-03:00  INFO 4706 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T17:39:48.191-03:00  INFO 4706 --- [bank_simulator] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
