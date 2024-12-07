@@ -4,24 +4,32 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.hibernate.validator.HibernateValidator;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.context.annotation.Bean;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
-import org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory;
+import org.hibernate.validator.HibernateValidator;
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+import org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory;
 
 /**
  * Created By : Berkson Ximenes
  * Date : 07/12/2024
  **/
 
+@Configuration
 public class GeneralBeanConfig {
 
+    private final Environment env;
+
+    public GeneralBeanConfig(Environment env) {
+        this.env = env;
+    }
 
     @Bean
     public ObjectMapper createMapper() {
@@ -47,7 +55,7 @@ public class GeneralBeanConfig {
     public StringEncryptor stringEncryptor() {
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
-        config.setPassword("123456789"); // Colocamos a palavra chave para decodificação em uma variável de ambiente no servidor.
+        config.setPassword(env.getProperty("encrypt.pass")); // Colocamos a palavra chave para decodificação em uma variável de ambiente no servidor.
         config.setAlgorithm("PBEWithMD5AndDES");
         config.setKeyObtentionIterations(500);
         config.setPoolSize(1);

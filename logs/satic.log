@@ -1,0 +1,16 @@
+2024-12-07T12:17:03.233-03:00 ERROR 15639 --- [bank_simulator] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.ssl.key-store-password' to java.lang.String:
+
+    Reason: java.lang.IllegalStateException: String Encryptor custom Bean not found with name 'stringEncryptor'
+
+Action:
+
+Update your application's configuration
+
