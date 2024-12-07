@@ -6,7 +6,7 @@ services:
       - 'POSTGRES_PASSWORD=secret'
       - 'POSTGRES_USER=bank_admin'
     ports:
-      - '5432'
+      - '35222:5432'
     volumes:
       - bank_simulator:/var/lib/postgresql/data
 
