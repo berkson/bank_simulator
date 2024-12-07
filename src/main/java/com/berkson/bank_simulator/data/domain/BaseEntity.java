@@ -1,4 +1,4 @@
-package com.berkson.bank_simulator.domain;
+package com.berkson.bank_simulator.data.domain;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,8 +24,4 @@ public class BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
-
-    public boolean isNew() {
-        return this.id == null;
-    }
 }
