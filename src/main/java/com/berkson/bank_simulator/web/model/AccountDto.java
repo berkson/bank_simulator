@@ -33,6 +33,7 @@ public class AccountDto extends AuditableEntityDto {
     private BigDecimal balance;
 
     @JsonProperty(value = "usuario")
+    @NotNull
     private UserDto user;
 
     @JsonProperty(value = "operacoes")
