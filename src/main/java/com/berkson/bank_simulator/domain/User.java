@@ -1,18 +1,13 @@
 package com.berkson.bank_simulator.domain;
 
-import jakarta.persistence.AttributeOverride;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.text.Collator;
+import java.util.*;
 
 /**
  * Created By : Berkson Ximenes
@@ -34,44 +29,73 @@ public class User extends BaseEntity implements UserDetails, Serializable, Compa
     private int age;
     @Column(name = "fullname", nullable = false)
     private String name;
+    @Column(name = "password", nullable = false)
+    @Getter(value = AccessLevel.NONE)
+    private String password;
     @Column(name = "email", nullable = false)
     private String email;
-    @Column(name = "email", nullable = false)
+    @OneToOne
     private Account account;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "permissions", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "authority_id"))
+    private List<Authority> authorities = new ArrayList<>();
 
 
     @Override
-    public int compareTo(User user) {
-        return 0;
+    public int compareTo(@NonNull User user) {
+        Collator collator = Collator.getInstance(Locale.getDefault());
+        collator.setStrength(Collator.PRIMARY);
+        try {
+            return collator.compare(this.name, user.name);
+        } catch (Exception e) {
+            return 0;
+        }
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return this.authorities;
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return this.password;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getId(), username);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+
+        if (!(obj instanceof User user))
+            return false;
+
+        return Objects.equals(this.getId(), user.getId()) && Objects.equals(this.username, user.username);
     }
 }

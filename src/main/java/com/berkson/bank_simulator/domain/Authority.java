@@ -1,5 +1,9 @@
 package com.berkson.bank_simulator.domain;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,9 +20,14 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table(name = "authorizations")
+@AttributeOverride(name = "id", column = @Column(name = "authority_id"))
 public class Authority extends BaseEntity implements GrantedAuthority, Serializable {
 
+    @Column(name = "authority", nullable = false)
     private String authority;
+    @Column(nullable = false)
     private String description;
 
     public Authority(Long id, String authority, String description) {
