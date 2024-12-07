@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service(value = "userDetailsService")
 public class BankUserDetailsService implements UserDetailsService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public BankUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
