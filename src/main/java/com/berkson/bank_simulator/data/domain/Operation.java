@@ -23,8 +23,10 @@ public class Operation extends AuditableEntity {
     @Column(name = "operation_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private OperationType operationType;
+
     @Column(nullable = false)
     private BigDecimal value;
+
     @ManyToOne
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
