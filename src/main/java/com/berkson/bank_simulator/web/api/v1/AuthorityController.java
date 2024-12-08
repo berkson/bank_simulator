@@ -1,5 +1,6 @@
 package com.berkson.bank_simulator.web.api.v1;
 
+import com.berkson.bank_simulator.web.annotation.security.IsUser;
 import com.berkson.bank_simulator.web.model.AuthorityDto;
 import com.berkson.bank_simulator.web.services.AuthorityService;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ public class AuthorityController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "/list", produces = MediaType.APPLICATION_JSON_VALUE)
+    @IsUser
     public List<AuthorityDto> getAll() {
         return authorityService.findAll();
     }
