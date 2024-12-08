@@ -5,6 +5,8 @@ import com.berkson.bank_simulator.data.repository.AccountRepository;
 import com.berkson.bank_simulator.web.mappers.AccountMapper;
 import com.berkson.bank_simulator.web.model.AccountDto;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -26,6 +28,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public Optional<AccountDto> findById(Long id) {
         return Optional.of(accountRepository
                 .findById(id).map(accountMapper::accountToAccountDto)
