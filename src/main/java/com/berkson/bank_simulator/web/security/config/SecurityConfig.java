@@ -57,6 +57,7 @@ public class SecurityConfig {
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         .requestMatchers(antMatcher("/index.html"), antMatcher("/"), antMatcher("/favicon.ico"), antMatcher("/home"),
                                 antMatcher("/login"), antMatcher("/*.css"), antMatcher("/*.js*"), antMatcher("/assets/**")).permitAll()
+                        .requestMatchers(antMatcher("/api/v1/user/save")).permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic((httpBasic) -> httpBasic.authenticationEntryPoint(authenticationEntryPoint))

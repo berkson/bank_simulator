@@ -6,7 +6,6 @@ import com.berkson.bank_simulator.data.repository.AccountRepository;
 import com.berkson.bank_simulator.data.repository.UserRepository;
 import com.berkson.bank_simulator.web.mappers.UserMapper;
 import com.berkson.bank_simulator.web.model.UserDto;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -51,7 +50,15 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public Optional<UserDto> findById(Long id) {
         return userRepository.findById(id).map(userMapper::userToUserDto);
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+    public UserDto findByUsername(String name) {
+        return userMapper.userToUserDto(userRepository.findByUsername(name));
+
     }
 }

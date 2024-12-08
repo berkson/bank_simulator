@@ -30,8 +30,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public Optional<AccountDto> findById(Long id) {
-        return Optional.of(accountRepository
-                .findById(id).map(accountMapper::accountToAccountDto)
-                .orElseThrow());
+        return accountRepository
+                .findById(id).map(accountMapper::accountToAccountDto);
     }
 }
