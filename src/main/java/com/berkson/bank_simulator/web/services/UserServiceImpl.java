@@ -6,6 +6,8 @@ import com.berkson.bank_simulator.data.repository.AccountRepository;
 import com.berkson.bank_simulator.data.repository.UserRepository;
 import com.berkson.bank_simulator.web.mappers.UserMapper;
 import com.berkson.bank_simulator.web.model.UserDto;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,11 +19,13 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final AccountRepository accountRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, AccountRepository accountRepository) {
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, AccountRepository accountRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
         this.accountRepository = accountRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
@@ -35,6 +39,7 @@ public class UserServiceImpl implements UserService {
         Account account = user.getAccount();
         Account savedAccount = accountRepository.save(account);
         user.setAccount(savedAccount);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return getUser(user);
     }
 
