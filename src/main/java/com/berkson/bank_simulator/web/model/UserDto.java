@@ -1,7 +1,6 @@
 package com.berkson.bank_simulator.web.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
@@ -41,7 +40,6 @@ public class UserDto extends AuditableEntityDto implements Serializable, Compara
     @NotBlank(message = "{field.senha.validation.constraints.NotBlank.message}")
     @Pattern(regexp = "^((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\\W).{6,8})$", message = "{senha.Pattern.message}")
     @JsonProperty(value = "senha", access = JsonProperty.Access.WRITE_ONLY)
-    @Getter(value = AccessLevel.NONE)
     private String password;
 
     @Email

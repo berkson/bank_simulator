@@ -30,14 +30,13 @@ public class User extends AuditableEntity implements UserDetails, Serializable, 
     @Column(name = "fullname", nullable = false)
     private String name;
     @Column(name = "password", nullable = false)
-    @Getter(value = AccessLevel.NONE)
     private String password;
     @Column(name = "email", nullable = false)
     private String email;
     @OneToOne
     @JoinColumn(name = "account_id")
     private Account account;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(name = "permissions", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "authority_id"))
     private List<Authority> authorities = new ArrayList<>();
@@ -56,6 +55,10 @@ public class User extends AuditableEntity implements UserDetails, Serializable, 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        return this.authorities;
+    }
+
+    public List<Authority> getRoles() {
         return this.authorities;
     }
 

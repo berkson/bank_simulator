@@ -25,11 +25,16 @@ public class Account extends AuditableEntity {
     @Column(name = "account_number", nullable = false, unique = true)
     private int accountNumber;
     @Column(name = "balance", nullable = false)
-    private BigDecimal balance;
+    private BigDecimal balance = BigDecimal.ZERO;
     @OneToOne(mappedBy = "account")
     private User user;
     @OneToMany(mappedBy = "account")
     private List<Operation> operations = new ArrayList<>();
+
+    public Account(int accountNumber, BigDecimal balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
 
     @Override
     public int hashCode() {
