@@ -7,5 +7,5 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface OperationService extends CrudService<OperationDto, Long> {
-    Page<OperationDto> findAllByAccount(AccountDto accountDto, Pageable pageable);
+    Page<OperationDto> findAllByAccount(Long id, Pageable pageable);
 }

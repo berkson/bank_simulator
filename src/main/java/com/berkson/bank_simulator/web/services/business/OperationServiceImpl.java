@@ -36,8 +36,8 @@ public class OperationServiceImpl implements OperationService {
     }
 
     @Override
-    public Page<OperationDto> findAllByAccount(AccountDto accountDto, Pageable pageable) {
-        return operationRepository.findAllByAccount_Id(accountDto.getId(), pageable)
+    public Page<OperationDto> findAllByAccount(Long id, Pageable pageable) {
+        return operationRepository.findAllByAccount_Id(id, pageable)
                 .map(operationMapper::operationToOperationDto);
     }
 }
